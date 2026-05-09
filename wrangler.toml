@@ -1,0 +1,8 @@
+name = "tanstack-start-app"
+main = "dist/server/server.js"
+compatibility_date = "2025-05-01"
+compatibility_flags = ["nodejs_compat"]
+
+[assets]
+directory = "./dist/client"
+binding = "ASSETS"
