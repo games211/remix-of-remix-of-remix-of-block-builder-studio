@@ -1,11 +1,21 @@
-// Deploy target: Cloudflare Pages. TanStack Start's "cloudflare-module"
-// preset emits a Worker-compatible SSR handler plus static assets that
-// Cloudflare Pages serves directly.
+// Static site: prerender all routes to plain HTML at build time.
 import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 
 export default defineConfig({
   cloudflare: false,
   tanstackStart: {
     target: "cloudflare-module",
+    prerender: {
+      enabled: true,
+      crawlLinks: true,
+      retryCount: 2,
+    },
+    pages: [
+      { path: "/" },
+      { path: "/gradient" },
+      { path: "/pixel-art" },
+      { path: "/shape-generator" },
+      { path: "/skin-editor" },
+    ],
   },
 });
