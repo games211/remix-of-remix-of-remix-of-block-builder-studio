@@ -8,22 +8,22 @@ const ICONS = {
 };
 
 const TOOLS = [
-  { href: "/shape-generator", title: "Shape Generator", desc: "Generate block layouts for spheres, ellipsoids, circles, cylinders and domes with layer-by-layer build guides.", icon: "boxes" },
-  { href: "/pixel-art", title: "Image to Pixel Art", desc: "Upload any image and convert it into Minecraft block pixel art. Pick a version, toggle blocks, and preview in 3D.", icon: "image" },
-  { href: "/gradient", title: "Block Gradient", desc: "Generate smooth Minecraft block gradients between any two blocks at any length.", icon: "palette" },
-  { href: "/skin-editor", title: "Skin Editor", desc: "Edit Minecraft skins in your browser. Import from a PNG or grab any player's skin by username.", icon: "shirt" },
+  { title: "Shape Generator", desc: "Generate block layouts for spheres, ellipsoids, circles, cylinders and domes with layer-by-layer build guides.", icon: "boxes" },
+  { title: "Image to Pixel Art", desc: "Upload any image and convert it into Minecraft block pixel art. Pick a version, toggle blocks, and preview in 3D.", icon: "image" },
+  { title: "Block Gradient", desc: "Generate smooth Minecraft block gradients between any two blocks at any length.", icon: "palette" },
+  { title: "Skin Editor", desc: "Edit Minecraft skins in your browser. Import from a PNG or grab any player's skin by username.", icon: "shirt" },
 ];
 
-// Render tool cards
+// Render tool cards (preview only — coming soon)
 const grid = document.getElementById("tools-grid");
 grid.innerHTML = TOOLS.map(t => `
-  <a class="tool-card" href="${t.href}">
+  <div class="tool-card tool-card-soon">
     <span class="tool-icon">${ICONS[t.icon]}</span>
     <h4>${t.title}</h4>
     <p>${t.desc}</p>
-    <span class="tool-open">Open ${ICONS.arrow}</span>
-  </a>
-`).join("") + `<div class="tool-card-empty">More tools coming soon</div>`;
+    <span class="tool-open">Coming soon</span>
+  </div>
+`).join("");
 
 // Theme toggle
 const themeBtn = document.getElementById("theme-btn");

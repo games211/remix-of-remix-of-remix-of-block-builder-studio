@@ -175,3 +175,7 @@ main { max-width: 1100px; margin: 0 auto; padding: 3rem 1rem; }
   border: 1px dashed var(--border); border-radius: 0.875rem;
   text-align: center; font-size: 0.875rem; color: var(--muted-foreground);
 }
+
+.tool-card-soon { cursor: default; opacity: 0.95; }
+.tool-card-soon .tool-open { color: var(--muted-foreground); }
+.btn[aria-disabled="true"] { cursor: default; opacity: 0.85; }
